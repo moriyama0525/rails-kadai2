@@ -1,0 +1,6 @@
+<h1>newページ</h1>
+<%= form_for @user, url: "/create",html: {method: :post} do |f| %>
+    <%= f.label :name, "名前" %>
+    <%= f.text_field :name %>
+    <%= f.submit "追加" %>
+<% end %>
