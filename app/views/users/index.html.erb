@@ -1,9 +1,9 @@
 <h1>indexページ</h1>
-<%= link_to "new", "/new" %>
+<%= link_to "new", new_user_path %>
 <% @users.each do |user| %>
     <def>
         <%= user.name %>
-        <%= link_to "edit", "/user/#{user.id}/edit" %>
-        <%= link_to "delete", "/user/#{user.id}", method: :delete %>
+        <%= link_to "edit", edit_user_path(user) %>
+        <%= link_to "delete", user, method: :delete %>
     </def>
 <% end %>
